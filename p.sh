@@ -6,6 +6,7 @@ i=1
 while [[ $i -le 12 ]] ; do
 printf -v j "%02d" $((i)) # $iの数値を2桁文字列に変換したものを$j に入れる
 sed \
+    -e '/^oto:/d' \
     -e '/^gra:/d' \
     -e '/^background:/d' \
     -e '/^imagefrom:/d' \
